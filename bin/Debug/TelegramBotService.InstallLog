@@ -1,0 +1,13 @@
+﻿Выполняется установка сборки 'D:\_practics\TelegramBotService\bin\Debug\TelegramBotService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\_practics\TelegramBotService\bin\Debug\TelegramBotService.InstallLog
+   assemblypath = D:\_practics\TelegramBotService\bin\Debug\TelegramBotService.exe
+Устанавливается служба TelegramBotService...
+Служба TelegramBotService успешно установлена.
+Создается исходный EventLog TelegramBotService в журнале Application...
+Выполняется фиксация сборки 'D:\_practics\TelegramBotService\bin\Debug\TelegramBotService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\_practics\TelegramBotService\bin\Debug\TelegramBotService.InstallLog
+   assemblypath = D:\_practics\TelegramBotService\bin\Debug\TelegramBotService.exe

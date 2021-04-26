@@ -1,0 +1,2875 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="test123" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="test123" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="test123">
+      <s:element name="FillXml">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mNumberContractE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mNumberContractT" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDRaion" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ERC" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FillXmlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FillXmlResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIDEmeterNP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idContract" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDRaion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIDEmeterNPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIDEmeterNPResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIDPeriod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Datetime" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDRaion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIDPeriodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIDPeriodResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCurrentPeriod">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCurrentPeriodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCurrentPeriodResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIDObjectNP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idContract" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIDObjectNPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIDObjectNPResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDateTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmeterNP" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDRaion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDateTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDateTimeResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ControlerSK">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmeterNP" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ControlerSKResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ControlerSKResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StatmentsDllZone">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idContract" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idEmeter" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Display1" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Display2" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Display3" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StatmentsDllZoneResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="StatmentsDllZoneResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StatmentsDll">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idContract" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idEmeter" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Display" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StatmentsDllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="StatmentsDllResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIDEmeterNPbyObj">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idObject" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIDEmeterNPbyObjResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIDEmeterNPbyObjResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="idTmeter">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NumberContract" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="idTmeterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idTmeterResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDateTimeGVS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDtmeter" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDateTimeGVSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDateTimeGVSResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Rpt_PrintCardConsumer_Jur">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NamePeriod" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDContract" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDStartPeriod" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDEndPeriod" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumberContract" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ConsumerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FullAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strHandler" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Raion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Rpt_PrintCardConsumer_JurResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Rpt_PrintCardConsumer_JurResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObjectEE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PeriodName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDContract" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="BeginIDPeriod" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndIDPeriod" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumberContract" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShortAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Chief" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Raion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObjectEEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObjectEEResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObjectTE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PeriodName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDContract" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="BeginIDPeriod" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndIDPeriod" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumberContract" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShortAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Chief" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObjectTEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObjectTEResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccountCardCGP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PeriodName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDContract" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="BeginIDPeriod" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndIDPeriod" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="numbercontract" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="displayname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="shortaddress" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="beginbalance" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccountCardCGPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AccountCardCGPResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccountCardERC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PeriodName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDContract" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="BeginIDPeriod" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndIDPeriod" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="numbercontract" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="displayname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="shortaddress" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="beginbalance" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccountCardERCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AccountCardERCResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccountCardERC_RaionFiz">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PeriodName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDContract" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="BeginIDPeriod" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndIDPeriod" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="numbercontract" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="displayname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="shortaddress" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="beginbalance" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDRaion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccountCardERC_RaionFizResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AccountCardERC_RaionFizResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SchetKvit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDPeriod" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDContract" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsAll" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="SKREK" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strFeederT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NamePeriod" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lngTypeReport" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="count" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Balance" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SchetKvitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SchetKvitResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SchetKvitByTempRecord">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDPeriod" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDTempReport" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NamePeriod" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SchetKvitByTempRecordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SchetKvitByTempRecordResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SchetKvitByTempRecord_RaionFiz">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDPeriod" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDTempReport" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NamePeriod" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDRaion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SchetKvitByTempRecord_RaionFizResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SchetKvitByTempRecord_RaionFizResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Rpt_PrintCardConsumerInvoice_Jur">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Notification" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="Verification" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="Prepayment" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="Autograph" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="Bill" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDContract" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDStartPeriod" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Raion" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Rpt_PrintCardConsumerInvoice_JurResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Rpt_PrintCardConsumerInvoice_JurResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserCard">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserCardResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserCardResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CabinetLogStatmets">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DateBegin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DateEnd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CabinetLogStatmetsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CabinetLogStatmetsResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="bank_account">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="date_begin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="date_end" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BankAccount" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="raion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="bank_accountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="bank_accountResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="bank_account_type">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="date_begin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="date_end" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BankAccount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name_acc" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="raion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="bank_account_typeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="bank_account_typeResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Print_ERCVedomost">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DateBegin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DateEnd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDAccounting" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Print_ERCVedomostResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Print_ERCVedomostResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPeople">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idContract" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Prefix" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPeopleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPeopleResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPlate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idContract" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPlateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPlateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOldPeople">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idContract" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOldPeopleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetOldPeopleResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClass">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmeterNP" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Raion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClassResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetClassResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTariff">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDRaion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDouble">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="double" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetTariffResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTariffResult" type="tns:ArrayOfDouble" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTariffZone">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetTariffZoneResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTariffZoneResult" type="tns:ArrayOfDouble" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERC_Select">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idCOntract" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERC_SelectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ERC_SelectResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERC_Insert">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CODE" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="WTYPE" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CUBE_BEG" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CUBE_END" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="DATELASTSHOWING" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDPeriod" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDTMeter" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idContract" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="UID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERC_InsertResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ERC_InsertResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInfoView">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idObjectNP" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDRaion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInfoViewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInfoViewResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInfoViewGVS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDTmeter" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInfoViewGVSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInfoViewGVSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInfoViewJur">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmeterNP" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Raion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInfoViewJurResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInfoViewJurResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindEmetersJur">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idContract" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Raion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindEmetersJurResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindEmetersJurResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindObjects">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idContract" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindObjectsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindObjectsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindConsumer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mNumberContractE" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="mIDRaion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindConsumerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindConsumerResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ShowEE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NumberContractE" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDRaion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ShowEEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ShowEEResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ShowTE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NumberContractE" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ShowTEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ShowTEResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindObjectsEE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idContract" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDRaion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindObjectsEEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindObjectsEEResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindObjectsEPowering">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idContract" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Raion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindObjectsEPoweringResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindObjectsEPoweringResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeclaredConsumption">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idContract" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idProduct" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Raion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeclaredConsumptionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeclaredConsumptionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AmountWithoutPU">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEPowering" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Raion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AmountWithoutPUResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AmountWithoutPUResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInfoTableJur">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEPowering" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Raion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInfoTableJurResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInfoTableJurResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Yakimov">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NumberContract" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="YakimovResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="YakimovResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTempRecord">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="midContract" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="mIDRaion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTempRecordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTempRecordResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPeriodList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDRaion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPeriodListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPeriodListResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveActualWM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IDTMeter" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Value1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Value2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Value3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Value4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Value5" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Value6" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Value7" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Value8" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Value9" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveActualWMResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveActualWMResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveActual">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idObject" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Display" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Display2" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveActualResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveActualResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="tmeters_jur">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id_contract" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="tmeters_jurResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tmeters_jurResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="tmeter_dates">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id_tmeter" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="tmeter_datesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tmeter_datesResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InfoTmeterAscute">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id_contract" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="id_tmeter" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InfoTmeterAscuteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InfoTmeterAscuteResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReportTmeterAscute">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="serial_number" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="date_begin" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="date_end" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReportTmeterAscuteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReportTmeterAscuteResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPeriodList_CardAbonent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDRaion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPeriodList_CardAbonentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPeriodList_CardAbonentResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OnOffCabinet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mRaion" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDRaion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OnOffCabinetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OnOffCabinetResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPeriodListERC">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetPeriodListERCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPeriodListERCResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIDAccounting">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NumberContract" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIDAccountingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIDAccountingResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBeginDayPeriod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDPeriod" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBeginDayPeriodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBeginDayPeriodResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEndDayPeriod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDPeriod" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEndDayPeriodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEndDayPeriodResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAddressObjectsERC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NumberContract" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAddressObjectsERCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAddressObjectsERCResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInfoContractsERC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NumberContract" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInfoContractsERCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInfoContractsERCResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="FillXmlSoapIn">
+    <wsdl:part name="parameters" element="tns:FillXml" />
+  </wsdl:message>
+  <wsdl:message name="FillXmlSoapOut">
+    <wsdl:part name="parameters" element="tns:FillXmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIDEmeterNPSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIDEmeterNP" />
+  </wsdl:message>
+  <wsdl:message name="GetIDEmeterNPSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIDEmeterNPResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIDPeriodSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIDPeriod" />
+  </wsdl:message>
+  <wsdl:message name="GetIDPeriodSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIDPeriodResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentPeriodSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCurrentPeriod" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentPeriodSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCurrentPeriodResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIDObjectNPSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIDObjectNP" />
+  </wsdl:message>
+  <wsdl:message name="GetIDObjectNPSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIDObjectNPResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDateTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDateTime" />
+  </wsdl:message>
+  <wsdl:message name="GetDateTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDateTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ControlerSKSoapIn">
+    <wsdl:part name="parameters" element="tns:ControlerSK" />
+  </wsdl:message>
+  <wsdl:message name="ControlerSKSoapOut">
+    <wsdl:part name="parameters" element="tns:ControlerSKResponse" />
+  </wsdl:message>
+  <wsdl:message name="StatmentsDllZoneSoapIn">
+    <wsdl:part name="parameters" element="tns:StatmentsDllZone" />
+  </wsdl:message>
+  <wsdl:message name="StatmentsDllZoneSoapOut">
+    <wsdl:part name="parameters" element="tns:StatmentsDllZoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="StatmentsDllSoapIn">
+    <wsdl:part name="parameters" element="tns:StatmentsDll" />
+  </wsdl:message>
+  <wsdl:message name="StatmentsDllSoapOut">
+    <wsdl:part name="parameters" element="tns:StatmentsDllResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIDEmeterNPbyObjSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIDEmeterNPbyObj" />
+  </wsdl:message>
+  <wsdl:message name="GetIDEmeterNPbyObjSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIDEmeterNPbyObjResponse" />
+  </wsdl:message>
+  <wsdl:message name="idTmeterSoapIn">
+    <wsdl:part name="parameters" element="tns:idTmeter" />
+  </wsdl:message>
+  <wsdl:message name="idTmeterSoapOut">
+    <wsdl:part name="parameters" element="tns:idTmeterResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDateTimeGVSSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDateTimeGVS" />
+  </wsdl:message>
+  <wsdl:message name="GetDateTimeGVSSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDateTimeGVSResponse" />
+  </wsdl:message>
+  <wsdl:message name="Rpt_PrintCardConsumer_JurSoapIn">
+    <wsdl:part name="parameters" element="tns:Rpt_PrintCardConsumer_Jur" />
+  </wsdl:message>
+  <wsdl:message name="Rpt_PrintCardConsumer_JurSoapOut">
+    <wsdl:part name="parameters" element="tns:Rpt_PrintCardConsumer_JurResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObjectEESoapIn">
+    <wsdl:part name="parameters" element="tns:ObjectEE" />
+  </wsdl:message>
+  <wsdl:message name="ObjectEESoapOut">
+    <wsdl:part name="parameters" element="tns:ObjectEEResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObjectTESoapIn">
+    <wsdl:part name="parameters" element="tns:ObjectTE" />
+  </wsdl:message>
+  <wsdl:message name="ObjectTESoapOut">
+    <wsdl:part name="parameters" element="tns:ObjectTEResponse" />
+  </wsdl:message>
+  <wsdl:message name="AccountCardCGPSoapIn">
+    <wsdl:part name="parameters" element="tns:AccountCardCGP" />
+  </wsdl:message>
+  <wsdl:message name="AccountCardCGPSoapOut">
+    <wsdl:part name="parameters" element="tns:AccountCardCGPResponse" />
+  </wsdl:message>
+  <wsdl:message name="AccountCardERCSoapIn">
+    <wsdl:part name="parameters" element="tns:AccountCardERC" />
+  </wsdl:message>
+  <wsdl:message name="AccountCardERCSoapOut">
+    <wsdl:part name="parameters" element="tns:AccountCardERCResponse" />
+  </wsdl:message>
+  <wsdl:message name="AccountCardERC_RaionFizSoapIn">
+    <wsdl:part name="parameters" element="tns:AccountCardERC_RaionFiz" />
+  </wsdl:message>
+  <wsdl:message name="AccountCardERC_RaionFizSoapOut">
+    <wsdl:part name="parameters" element="tns:AccountCardERC_RaionFizResponse" />
+  </wsdl:message>
+  <wsdl:message name="SchetKvitSoapIn">
+    <wsdl:part name="parameters" element="tns:SchetKvit" />
+  </wsdl:message>
+  <wsdl:message name="SchetKvitSoapOut">
+    <wsdl:part name="parameters" element="tns:SchetKvitResponse" />
+  </wsdl:message>
+  <wsdl:message name="SchetKvitByTempRecordSoapIn">
+    <wsdl:part name="parameters" element="tns:SchetKvitByTempRecord" />
+  </wsdl:message>
+  <wsdl:message name="SchetKvitByTempRecordSoapOut">
+    <wsdl:part name="parameters" element="tns:SchetKvitByTempRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="SchetKvitByTempRecord_RaionFizSoapIn">
+    <wsdl:part name="parameters" element="tns:SchetKvitByTempRecord_RaionFiz" />
+  </wsdl:message>
+  <wsdl:message name="SchetKvitByTempRecord_RaionFizSoapOut">
+    <wsdl:part name="parameters" element="tns:SchetKvitByTempRecord_RaionFizResponse" />
+  </wsdl:message>
+  <wsdl:message name="Rpt_PrintCardConsumerInvoice_JurSoapIn">
+    <wsdl:part name="parameters" element="tns:Rpt_PrintCardConsumerInvoice_Jur" />
+  </wsdl:message>
+  <wsdl:message name="Rpt_PrintCardConsumerInvoice_JurSoapOut">
+    <wsdl:part name="parameters" element="tns:Rpt_PrintCardConsumerInvoice_JurResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserCardSoapIn">
+    <wsdl:part name="parameters" element="tns:UserCard" />
+  </wsdl:message>
+  <wsdl:message name="UserCardSoapOut">
+    <wsdl:part name="parameters" element="tns:UserCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="CabinetLogStatmetsSoapIn">
+    <wsdl:part name="parameters" element="tns:CabinetLogStatmets" />
+  </wsdl:message>
+  <wsdl:message name="CabinetLogStatmetsSoapOut">
+    <wsdl:part name="parameters" element="tns:CabinetLogStatmetsResponse" />
+  </wsdl:message>
+  <wsdl:message name="bank_accountSoapIn">
+    <wsdl:part name="parameters" element="tns:bank_account" />
+  </wsdl:message>
+  <wsdl:message name="bank_accountSoapOut">
+    <wsdl:part name="parameters" element="tns:bank_accountResponse" />
+  </wsdl:message>
+  <wsdl:message name="bank_account_typeSoapIn">
+    <wsdl:part name="parameters" element="tns:bank_account_type" />
+  </wsdl:message>
+  <wsdl:message name="bank_account_typeSoapOut">
+    <wsdl:part name="parameters" element="tns:bank_account_typeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Print_ERCVedomostSoapIn">
+    <wsdl:part name="parameters" element="tns:Print_ERCVedomost" />
+  </wsdl:message>
+  <wsdl:message name="Print_ERCVedomostSoapOut">
+    <wsdl:part name="parameters" element="tns:Print_ERCVedomostResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPeopleSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPeople" />
+  </wsdl:message>
+  <wsdl:message name="GetPeopleSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPeopleResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPlateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPlate" />
+  </wsdl:message>
+  <wsdl:message name="GetPlateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPlateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOldPeopleSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOldPeople" />
+  </wsdl:message>
+  <wsdl:message name="GetOldPeopleSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOldPeopleResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetClassSoapIn">
+    <wsdl:part name="parameters" element="tns:GetClass" />
+  </wsdl:message>
+  <wsdl:message name="GetClassSoapOut">
+    <wsdl:part name="parameters" element="tns:GetClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTariffSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTariff" />
+  </wsdl:message>
+  <wsdl:message name="GetTariffSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTariffResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTariffZoneSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTariffZone" />
+  </wsdl:message>
+  <wsdl:message name="GetTariffZoneSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTariffZoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="ERC_SelectSoapIn">
+    <wsdl:part name="parameters" element="tns:ERC_Select" />
+  </wsdl:message>
+  <wsdl:message name="ERC_SelectSoapOut">
+    <wsdl:part name="parameters" element="tns:ERC_SelectResponse" />
+  </wsdl:message>
+  <wsdl:message name="ERC_InsertSoapIn">
+    <wsdl:part name="parameters" element="tns:ERC_Insert" />
+  </wsdl:message>
+  <wsdl:message name="ERC_InsertSoapOut">
+    <wsdl:part name="parameters" element="tns:ERC_InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInfoViewSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInfoView" />
+  </wsdl:message>
+  <wsdl:message name="GetInfoViewSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInfoViewResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInfoViewGVSSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInfoViewGVS" />
+  </wsdl:message>
+  <wsdl:message name="GetInfoViewGVSSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInfoViewGVSResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInfoViewJurSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInfoViewJur" />
+  </wsdl:message>
+  <wsdl:message name="GetInfoViewJurSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInfoViewJurResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindEmetersJurSoapIn">
+    <wsdl:part name="parameters" element="tns:FindEmetersJur" />
+  </wsdl:message>
+  <wsdl:message name="FindEmetersJurSoapOut">
+    <wsdl:part name="parameters" element="tns:FindEmetersJurResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindObjectsSoapIn">
+    <wsdl:part name="parameters" element="tns:FindObjects" />
+  </wsdl:message>
+  <wsdl:message name="FindObjectsSoapOut">
+    <wsdl:part name="parameters" element="tns:FindObjectsResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindConsumerSoapIn">
+    <wsdl:part name="parameters" element="tns:FindConsumer" />
+  </wsdl:message>
+  <wsdl:message name="FindConsumerSoapOut">
+    <wsdl:part name="parameters" element="tns:FindConsumerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ShowEESoapIn">
+    <wsdl:part name="parameters" element="tns:ShowEE" />
+  </wsdl:message>
+  <wsdl:message name="ShowEESoapOut">
+    <wsdl:part name="parameters" element="tns:ShowEEResponse" />
+  </wsdl:message>
+  <wsdl:message name="ShowTESoapIn">
+    <wsdl:part name="parameters" element="tns:ShowTE" />
+  </wsdl:message>
+  <wsdl:message name="ShowTESoapOut">
+    <wsdl:part name="parameters" element="tns:ShowTEResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindObjectsEESoapIn">
+    <wsdl:part name="parameters" element="tns:FindObjectsEE" />
+  </wsdl:message>
+  <wsdl:message name="FindObjectsEESoapOut">
+    <wsdl:part name="parameters" element="tns:FindObjectsEEResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindObjectsEPoweringSoapIn">
+    <wsdl:part name="parameters" element="tns:FindObjectsEPowering" />
+  </wsdl:message>
+  <wsdl:message name="FindObjectsEPoweringSoapOut">
+    <wsdl:part name="parameters" element="tns:FindObjectsEPoweringResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeclaredConsumptionSoapIn">
+    <wsdl:part name="parameters" element="tns:DeclaredConsumption" />
+  </wsdl:message>
+  <wsdl:message name="DeclaredConsumptionSoapOut">
+    <wsdl:part name="parameters" element="tns:DeclaredConsumptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="AmountWithoutPUSoapIn">
+    <wsdl:part name="parameters" element="tns:AmountWithoutPU" />
+  </wsdl:message>
+  <wsdl:message name="AmountWithoutPUSoapOut">
+    <wsdl:part name="parameters" element="tns:AmountWithoutPUResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInfoTableJurSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInfoTableJur" />
+  </wsdl:message>
+  <wsdl:message name="GetInfoTableJurSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInfoTableJurResponse" />
+  </wsdl:message>
+  <wsdl:message name="YakimovSoapIn">
+    <wsdl:part name="parameters" element="tns:Yakimov" />
+  </wsdl:message>
+  <wsdl:message name="YakimovSoapOut">
+    <wsdl:part name="parameters" element="tns:YakimovResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTempRecordSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTempRecord" />
+  </wsdl:message>
+  <wsdl:message name="GetTempRecordSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTempRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPeriodListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPeriodList" />
+  </wsdl:message>
+  <wsdl:message name="GetPeriodListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPeriodListResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveActualWMSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveActualWM" />
+  </wsdl:message>
+  <wsdl:message name="SaveActualWMSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveActualWMResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveActualSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveActual" />
+  </wsdl:message>
+  <wsdl:message name="SaveActualSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveActualResponse" />
+  </wsdl:message>
+  <wsdl:message name="tmeters_jurSoapIn">
+    <wsdl:part name="parameters" element="tns:tmeters_jur" />
+  </wsdl:message>
+  <wsdl:message name="tmeters_jurSoapOut">
+    <wsdl:part name="parameters" element="tns:tmeters_jurResponse" />
+  </wsdl:message>
+  <wsdl:message name="tmeter_datesSoapIn">
+    <wsdl:part name="parameters" element="tns:tmeter_dates" />
+  </wsdl:message>
+  <wsdl:message name="tmeter_datesSoapOut">
+    <wsdl:part name="parameters" element="tns:tmeter_datesResponse" />
+  </wsdl:message>
+  <wsdl:message name="InfoTmeterAscuteSoapIn">
+    <wsdl:part name="parameters" element="tns:InfoTmeterAscute" />
+  </wsdl:message>
+  <wsdl:message name="InfoTmeterAscuteSoapOut">
+    <wsdl:part name="parameters" element="tns:InfoTmeterAscuteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReportTmeterAscuteSoapIn">
+    <wsdl:part name="parameters" element="tns:ReportTmeterAscute" />
+  </wsdl:message>
+  <wsdl:message name="ReportTmeterAscuteSoapOut">
+    <wsdl:part name="parameters" element="tns:ReportTmeterAscuteResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPeriodList_CardAbonentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPeriodList_CardAbonent" />
+  </wsdl:message>
+  <wsdl:message name="GetPeriodList_CardAbonentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPeriodList_CardAbonentResponse" />
+  </wsdl:message>
+  <wsdl:message name="OnOffCabinetSoapIn">
+    <wsdl:part name="parameters" element="tns:OnOffCabinet" />
+  </wsdl:message>
+  <wsdl:message name="OnOffCabinetSoapOut">
+    <wsdl:part name="parameters" element="tns:OnOffCabinetResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPeriodListERCSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPeriodListERC" />
+  </wsdl:message>
+  <wsdl:message name="GetPeriodListERCSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPeriodListERCResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIDAccountingSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIDAccounting" />
+  </wsdl:message>
+  <wsdl:message name="GetIDAccountingSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIDAccountingResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBeginDayPeriodSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBeginDayPeriod" />
+  </wsdl:message>
+  <wsdl:message name="GetBeginDayPeriodSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBeginDayPeriodResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEndDayPeriodSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEndDayPeriod" />
+  </wsdl:message>
+  <wsdl:message name="GetEndDayPeriodSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEndDayPeriodResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAddressObjectsERCSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAddressObjectsERC" />
+  </wsdl:message>
+  <wsdl:message name="GetAddressObjectsERCSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAddressObjectsERCResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInfoContractsERCSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInfoContractsERC" />
+  </wsdl:message>
+  <wsdl:message name="GetInfoContractsERCSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInfoContractsERCResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="FillXml">
+      <wsdl:input message="tns:FillXmlSoapIn" />
+      <wsdl:output message="tns:FillXmlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIDEmeterNP">
+      <wsdl:input message="tns:GetIDEmeterNPSoapIn" />
+      <wsdl:output message="tns:GetIDEmeterNPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIDPeriod">
+      <wsdl:input message="tns:GetIDPeriodSoapIn" />
+      <wsdl:output message="tns:GetIDPeriodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentPeriod">
+      <wsdl:input message="tns:GetCurrentPeriodSoapIn" />
+      <wsdl:output message="tns:GetCurrentPeriodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIDObjectNP">
+      <wsdl:input message="tns:GetIDObjectNPSoapIn" />
+      <wsdl:output message="tns:GetIDObjectNPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDateTime">
+      <wsdl:input message="tns:GetDateTimeSoapIn" />
+      <wsdl:output message="tns:GetDateTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ControlerSK">
+      <wsdl:input message="tns:ControlerSKSoapIn" />
+      <wsdl:output message="tns:ControlerSKSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StatmentsDllZone">
+      <wsdl:input message="tns:StatmentsDllZoneSoapIn" />
+      <wsdl:output message="tns:StatmentsDllZoneSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StatmentsDll">
+      <wsdl:input message="tns:StatmentsDllSoapIn" />
+      <wsdl:output message="tns:StatmentsDllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIDEmeterNPbyObj">
+      <wsdl:input message="tns:GetIDEmeterNPbyObjSoapIn" />
+      <wsdl:output message="tns:GetIDEmeterNPbyObjSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="idTmeter">
+      <wsdl:input message="tns:idTmeterSoapIn" />
+      <wsdl:output message="tns:idTmeterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDateTimeGVS">
+      <wsdl:input message="tns:GetDateTimeGVSSoapIn" />
+      <wsdl:output message="tns:GetDateTimeGVSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Rpt_PrintCardConsumer_Jur">
+      <wsdl:input message="tns:Rpt_PrintCardConsumer_JurSoapIn" />
+      <wsdl:output message="tns:Rpt_PrintCardConsumer_JurSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObjectEE">
+      <wsdl:input message="tns:ObjectEESoapIn" />
+      <wsdl:output message="tns:ObjectEESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObjectTE">
+      <wsdl:input message="tns:ObjectTESoapIn" />
+      <wsdl:output message="tns:ObjectTESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AccountCardCGP">
+      <wsdl:input message="tns:AccountCardCGPSoapIn" />
+      <wsdl:output message="tns:AccountCardCGPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AccountCardERC">
+      <wsdl:input message="tns:AccountCardERCSoapIn" />
+      <wsdl:output message="tns:AccountCardERCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AccountCardERC_RaionFiz">
+      <wsdl:input message="tns:AccountCardERC_RaionFizSoapIn" />
+      <wsdl:output message="tns:AccountCardERC_RaionFizSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SchetKvit">
+      <wsdl:input message="tns:SchetKvitSoapIn" />
+      <wsdl:output message="tns:SchetKvitSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SchetKvitByTempRecord">
+      <wsdl:input message="tns:SchetKvitByTempRecordSoapIn" />
+      <wsdl:output message="tns:SchetKvitByTempRecordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SchetKvitByTempRecord_RaionFiz">
+      <wsdl:input message="tns:SchetKvitByTempRecord_RaionFizSoapIn" />
+      <wsdl:output message="tns:SchetKvitByTempRecord_RaionFizSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Rpt_PrintCardConsumerInvoice_Jur">
+      <wsdl:input message="tns:Rpt_PrintCardConsumerInvoice_JurSoapIn" />
+      <wsdl:output message="tns:Rpt_PrintCardConsumerInvoice_JurSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserCard">
+      <wsdl:input message="tns:UserCardSoapIn" />
+      <wsdl:output message="tns:UserCardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CabinetLogStatmets">
+      <wsdl:input message="tns:CabinetLogStatmetsSoapIn" />
+      <wsdl:output message="tns:CabinetLogStatmetsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="bank_account">
+      <wsdl:input message="tns:bank_accountSoapIn" />
+      <wsdl:output message="tns:bank_accountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="bank_account_type">
+      <wsdl:input message="tns:bank_account_typeSoapIn" />
+      <wsdl:output message="tns:bank_account_typeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Print_ERCVedomost">
+      <wsdl:input message="tns:Print_ERCVedomostSoapIn" />
+      <wsdl:output message="tns:Print_ERCVedomostSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPeople">
+      <wsdl:input message="tns:GetPeopleSoapIn" />
+      <wsdl:output message="tns:GetPeopleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlate">
+      <wsdl:input message="tns:GetPlateSoapIn" />
+      <wsdl:output message="tns:GetPlateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOldPeople">
+      <wsdl:input message="tns:GetOldPeopleSoapIn" />
+      <wsdl:output message="tns:GetOldPeopleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClass">
+      <wsdl:input message="tns:GetClassSoapIn" />
+      <wsdl:output message="tns:GetClassSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTariff">
+      <wsdl:input message="tns:GetTariffSoapIn" />
+      <wsdl:output message="tns:GetTariffSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTariffZone">
+      <wsdl:input message="tns:GetTariffZoneSoapIn" />
+      <wsdl:output message="tns:GetTariffZoneSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ERC_Select">
+      <wsdl:input message="tns:ERC_SelectSoapIn" />
+      <wsdl:output message="tns:ERC_SelectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ERC_Insert">
+      <wsdl:input message="tns:ERC_InsertSoapIn" />
+      <wsdl:output message="tns:ERC_InsertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInfoView">
+      <wsdl:input message="tns:GetInfoViewSoapIn" />
+      <wsdl:output message="tns:GetInfoViewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInfoViewGVS">
+      <wsdl:input message="tns:GetInfoViewGVSSoapIn" />
+      <wsdl:output message="tns:GetInfoViewGVSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInfoViewJur">
+      <wsdl:input message="tns:GetInfoViewJurSoapIn" />
+      <wsdl:output message="tns:GetInfoViewJurSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindEmetersJur">
+      <wsdl:input message="tns:FindEmetersJurSoapIn" />
+      <wsdl:output message="tns:FindEmetersJurSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindObjects">
+      <wsdl:input message="tns:FindObjectsSoapIn" />
+      <wsdl:output message="tns:FindObjectsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindConsumer">
+      <wsdl:input message="tns:FindConsumerSoapIn" />
+      <wsdl:output message="tns:FindConsumerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowEE">
+      <wsdl:input message="tns:ShowEESoapIn" />
+      <wsdl:output message="tns:ShowEESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowTE">
+      <wsdl:input message="tns:ShowTESoapIn" />
+      <wsdl:output message="tns:ShowTESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindObjectsEE">
+      <wsdl:input message="tns:FindObjectsEESoapIn" />
+      <wsdl:output message="tns:FindObjectsEESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindObjectsEPowering">
+      <wsdl:input message="tns:FindObjectsEPoweringSoapIn" />
+      <wsdl:output message="tns:FindObjectsEPoweringSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeclaredConsumption">
+      <wsdl:input message="tns:DeclaredConsumptionSoapIn" />
+      <wsdl:output message="tns:DeclaredConsumptionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AmountWithoutPU">
+      <wsdl:input message="tns:AmountWithoutPUSoapIn" />
+      <wsdl:output message="tns:AmountWithoutPUSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInfoTableJur">
+      <wsdl:input message="tns:GetInfoTableJurSoapIn" />
+      <wsdl:output message="tns:GetInfoTableJurSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Yakimov">
+      <wsdl:input message="tns:YakimovSoapIn" />
+      <wsdl:output message="tns:YakimovSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTempRecord">
+      <wsdl:input message="tns:GetTempRecordSoapIn" />
+      <wsdl:output message="tns:GetTempRecordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPeriodList">
+      <wsdl:input message="tns:GetPeriodListSoapIn" />
+      <wsdl:output message="tns:GetPeriodListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveActualWM">
+      <wsdl:input message="tns:SaveActualWMSoapIn" />
+      <wsdl:output message="tns:SaveActualWMSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveActual">
+      <wsdl:input message="tns:SaveActualSoapIn" />
+      <wsdl:output message="tns:SaveActualSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="tmeters_jur">
+      <wsdl:input message="tns:tmeters_jurSoapIn" />
+      <wsdl:output message="tns:tmeters_jurSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="tmeter_dates">
+      <wsdl:input message="tns:tmeter_datesSoapIn" />
+      <wsdl:output message="tns:tmeter_datesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InfoTmeterAscute">
+      <wsdl:input message="tns:InfoTmeterAscuteSoapIn" />
+      <wsdl:output message="tns:InfoTmeterAscuteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReportTmeterAscute">
+      <wsdl:input message="tns:ReportTmeterAscuteSoapIn" />
+      <wsdl:output message="tns:ReportTmeterAscuteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPeriodList_CardAbonent">
+      <wsdl:input message="tns:GetPeriodList_CardAbonentSoapIn" />
+      <wsdl:output message="tns:GetPeriodList_CardAbonentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OnOffCabinet">
+      <wsdl:input message="tns:OnOffCabinetSoapIn" />
+      <wsdl:output message="tns:OnOffCabinetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPeriodListERC">
+      <wsdl:input message="tns:GetPeriodListERCSoapIn" />
+      <wsdl:output message="tns:GetPeriodListERCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIDAccounting">
+      <wsdl:input message="tns:GetIDAccountingSoapIn" />
+      <wsdl:output message="tns:GetIDAccountingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBeginDayPeriod">
+      <wsdl:input message="tns:GetBeginDayPeriodSoapIn" />
+      <wsdl:output message="tns:GetBeginDayPeriodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEndDayPeriod">
+      <wsdl:input message="tns:GetEndDayPeriodSoapIn" />
+      <wsdl:output message="tns:GetEndDayPeriodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAddressObjectsERC">
+      <wsdl:input message="tns:GetAddressObjectsERCSoapIn" />
+      <wsdl:output message="tns:GetAddressObjectsERCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInfoContractsERC">
+      <wsdl:input message="tns:GetInfoContractsERCSoapIn" />
+      <wsdl:output message="tns:GetInfoContractsERCSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FillXml">
+      <soap:operation soapAction="test123/FillXml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIDEmeterNP">
+      <soap:operation soapAction="test123/GetIDEmeterNP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIDPeriod">
+      <soap:operation soapAction="test123/GetIDPeriod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentPeriod">
+      <soap:operation soapAction="test123/GetCurrentPeriod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIDObjectNP">
+      <soap:operation soapAction="test123/GetIDObjectNP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDateTime">
+      <soap:operation soapAction="test123/GetDateTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ControlerSK">
+      <soap:operation soapAction="test123/ControlerSK" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StatmentsDllZone">
+      <soap:operation soapAction="test123/StatmentsDllZone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StatmentsDll">
+      <soap:operation soapAction="test123/StatmentsDll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIDEmeterNPbyObj">
+      <soap:operation soapAction="test123/GetIDEmeterNPbyObj" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="idTmeter">
+      <soap:operation soapAction="test123/idTmeter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDateTimeGVS">
+      <soap:operation soapAction="test123/GetDateTimeGVS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Rpt_PrintCardConsumer_Jur">
+      <soap:operation soapAction="test123/Rpt_PrintCardConsumer_Jur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObjectEE">
+      <soap:operation soapAction="test123/ObjectEE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObjectTE">
+      <soap:operation soapAction="test123/ObjectTE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccountCardCGP">
+      <soap:operation soapAction="test123/AccountCardCGP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccountCardERC">
+      <soap:operation soapAction="test123/AccountCardERC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccountCardERC_RaionFiz">
+      <soap:operation soapAction="test123/AccountCardERC_RaionFiz" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SchetKvit">
+      <soap:operation soapAction="test123/SchetKvit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SchetKvitByTempRecord">
+      <soap:operation soapAction="test123/SchetKvitByTempRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SchetKvitByTempRecord_RaionFiz">
+      <soap:operation soapAction="test123/SchetKvitByTempRecord_RaionFiz" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Rpt_PrintCardConsumerInvoice_Jur">
+      <soap:operation soapAction="test123/Rpt_PrintCardConsumerInvoice_Jur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserCard">
+      <soap:operation soapAction="test123/UserCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CabinetLogStatmets">
+      <soap:operation soapAction="test123/CabinetLogStatmets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bank_account">
+      <soap:operation soapAction="test123/bank_account" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bank_account_type">
+      <soap:operation soapAction="test123/bank_account_type" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Print_ERCVedomost">
+      <soap:operation soapAction="test123/Print_ERCVedomost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPeople">
+      <soap:operation soapAction="test123/GetPeople" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlate">
+      <soap:operation soapAction="test123/GetPlate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOldPeople">
+      <soap:operation soapAction="test123/GetOldPeople" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClass">
+      <soap:operation soapAction="test123/GetClass" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTariff">
+      <soap:operation soapAction="test123/GetTariff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTariffZone">
+      <soap:operation soapAction="test123/GetTariffZone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ERC_Select">
+      <soap:operation soapAction="test123/ERC_Select" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ERC_Insert">
+      <soap:operation soapAction="test123/ERC_Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInfoView">
+      <soap:operation soapAction="test123/GetInfoView" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInfoViewGVS">
+      <soap:operation soapAction="test123/GetInfoViewGVS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInfoViewJur">
+      <soap:operation soapAction="test123/GetInfoViewJur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindEmetersJur">
+      <soap:operation soapAction="test123/FindEmetersJur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindObjects">
+      <soap:operation soapAction="test123/FindObjects" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindConsumer">
+      <soap:operation soapAction="test123/FindConsumer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowEE">
+      <soap:operation soapAction="test123/ShowEE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowTE">
+      <soap:operation soapAction="test123/ShowTE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindObjectsEE">
+      <soap:operation soapAction="test123/FindObjectsEE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindObjectsEPowering">
+      <soap:operation soapAction="test123/FindObjectsEPowering" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeclaredConsumption">
+      <soap:operation soapAction="test123/DeclaredConsumption" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AmountWithoutPU">
+      <soap:operation soapAction="test123/AmountWithoutPU" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInfoTableJur">
+      <soap:operation soapAction="test123/GetInfoTableJur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Yakimov">
+      <soap:operation soapAction="test123/Yakimov" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTempRecord">
+      <soap:operation soapAction="test123/GetTempRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPeriodList">
+      <soap:operation soapAction="test123/GetPeriodList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveActualWM">
+      <soap:operation soapAction="test123/SaveActualWM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveActual">
+      <soap:operation soapAction="test123/SaveActual" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tmeters_jur">
+      <soap:operation soapAction="test123/tmeters_jur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tmeter_dates">
+      <soap:operation soapAction="test123/tmeter_dates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InfoTmeterAscute">
+      <soap:operation soapAction="test123/InfoTmeterAscute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportTmeterAscute">
+      <soap:operation soapAction="test123/ReportTmeterAscute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPeriodList_CardAbonent">
+      <soap:operation soapAction="test123/GetPeriodList_CardAbonent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnOffCabinet">
+      <soap:operation soapAction="test123/OnOffCabinet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPeriodListERC">
+      <soap:operation soapAction="test123/GetPeriodListERC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIDAccounting">
+      <soap:operation soapAction="test123/GetIDAccounting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBeginDayPeriod">
+      <soap:operation soapAction="test123/GetBeginDayPeriod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEndDayPeriod">
+      <soap:operation soapAction="test123/GetEndDayPeriod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAddressObjectsERC">
+      <soap:operation soapAction="test123/GetAddressObjectsERC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInfoContractsERC">
+      <soap:operation soapAction="test123/GetInfoContractsERC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FillXml">
+      <soap12:operation soapAction="test123/FillXml" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIDEmeterNP">
+      <soap12:operation soapAction="test123/GetIDEmeterNP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIDPeriod">
+      <soap12:operation soapAction="test123/GetIDPeriod" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentPeriod">
+      <soap12:operation soapAction="test123/GetCurrentPeriod" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIDObjectNP">
+      <soap12:operation soapAction="test123/GetIDObjectNP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDateTime">
+      <soap12:operation soapAction="test123/GetDateTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ControlerSK">
+      <soap12:operation soapAction="test123/ControlerSK" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StatmentsDllZone">
+      <soap12:operation soapAction="test123/StatmentsDllZone" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StatmentsDll">
+      <soap12:operation soapAction="test123/StatmentsDll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIDEmeterNPbyObj">
+      <soap12:operation soapAction="test123/GetIDEmeterNPbyObj" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="idTmeter">
+      <soap12:operation soapAction="test123/idTmeter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDateTimeGVS">
+      <soap12:operation soapAction="test123/GetDateTimeGVS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Rpt_PrintCardConsumer_Jur">
+      <soap12:operation soapAction="test123/Rpt_PrintCardConsumer_Jur" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObjectEE">
+      <soap12:operation soapAction="test123/ObjectEE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObjectTE">
+      <soap12:operation soapAction="test123/ObjectTE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccountCardCGP">
+      <soap12:operation soapAction="test123/AccountCardCGP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccountCardERC">
+      <soap12:operation soapAction="test123/AccountCardERC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccountCardERC_RaionFiz">
+      <soap12:operation soapAction="test123/AccountCardERC_RaionFiz" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SchetKvit">
+      <soap12:operation soapAction="test123/SchetKvit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SchetKvitByTempRecord">
+      <soap12:operation soapAction="test123/SchetKvitByTempRecord" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SchetKvitByTempRecord_RaionFiz">
+      <soap12:operation soapAction="test123/SchetKvitByTempRecord_RaionFiz" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Rpt_PrintCardConsumerInvoice_Jur">
+      <soap12:operation soapAction="test123/Rpt_PrintCardConsumerInvoice_Jur" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserCard">
+      <soap12:operation soapAction="test123/UserCard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CabinetLogStatmets">
+      <soap12:operation soapAction="test123/CabinetLogStatmets" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bank_account">
+      <soap12:operation soapAction="test123/bank_account" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bank_account_type">
+      <soap12:operation soapAction="test123/bank_account_type" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Print_ERCVedomost">
+      <soap12:operation soapAction="test123/Print_ERCVedomost" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPeople">
+      <soap12:operation soapAction="test123/GetPeople" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlate">
+      <soap12:operation soapAction="test123/GetPlate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOldPeople">
+      <soap12:operation soapAction="test123/GetOldPeople" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClass">
+      <soap12:operation soapAction="test123/GetClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTariff">
+      <soap12:operation soapAction="test123/GetTariff" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTariffZone">
+      <soap12:operation soapAction="test123/GetTariffZone" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ERC_Select">
+      <soap12:operation soapAction="test123/ERC_Select" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ERC_Insert">
+      <soap12:operation soapAction="test123/ERC_Insert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInfoView">
+      <soap12:operation soapAction="test123/GetInfoView" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInfoViewGVS">
+      <soap12:operation soapAction="test123/GetInfoViewGVS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInfoViewJur">
+      <soap12:operation soapAction="test123/GetInfoViewJur" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindEmetersJur">
+      <soap12:operation soapAction="test123/FindEmetersJur" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindObjects">
+      <soap12:operation soapAction="test123/FindObjects" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindConsumer">
+      <soap12:operation soapAction="test123/FindConsumer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowEE">
+      <soap12:operation soapAction="test123/ShowEE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowTE">
+      <soap12:operation soapAction="test123/ShowTE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindObjectsEE">
+      <soap12:operation soapAction="test123/FindObjectsEE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindObjectsEPowering">
+      <soap12:operation soapAction="test123/FindObjectsEPowering" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeclaredConsumption">
+      <soap12:operation soapAction="test123/DeclaredConsumption" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AmountWithoutPU">
+      <soap12:operation soapAction="test123/AmountWithoutPU" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInfoTableJur">
+      <soap12:operation soapAction="test123/GetInfoTableJur" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Yakimov">
+      <soap12:operation soapAction="test123/Yakimov" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTempRecord">
+      <soap12:operation soapAction="test123/GetTempRecord" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPeriodList">
+      <soap12:operation soapAction="test123/GetPeriodList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveActualWM">
+      <soap12:operation soapAction="test123/SaveActualWM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveActual">
+      <soap12:operation soapAction="test123/SaveActual" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tmeters_jur">
+      <soap12:operation soapAction="test123/tmeters_jur" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tmeter_dates">
+      <soap12:operation soapAction="test123/tmeter_dates" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InfoTmeterAscute">
+      <soap12:operation soapAction="test123/InfoTmeterAscute" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportTmeterAscute">
+      <soap12:operation soapAction="test123/ReportTmeterAscute" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPeriodList_CardAbonent">
+      <soap12:operation soapAction="test123/GetPeriodList_CardAbonent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnOffCabinet">
+      <soap12:operation soapAction="test123/OnOffCabinet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPeriodListERC">
+      <soap12:operation soapAction="test123/GetPeriodListERC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIDAccounting">
+      <soap12:operation soapAction="test123/GetIDAccounting" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBeginDayPeriod">
+      <soap12:operation soapAction="test123/GetBeginDayPeriod" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEndDayPeriod">
+      <soap12:operation soapAction="test123/GetEndDayPeriod" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAddressObjectsERC">
+      <soap12:operation soapAction="test123/GetAddressObjectsERC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInfoContractsERC">
+      <soap12:operation soapAction="test123/GetInfoContractsERC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://ske-web:9876/WebServiceCabinet/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://ske-web:9876/WebServiceCabinet/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

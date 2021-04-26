@@ -1,0 +1,1554 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+TelegramBotService
+</name>
+</assembly>
+<members>
+<member name="T:TelegramBotService.My.Resources.Resources">
+<summary>
+  Класс ресурса со строгой типизацией для поиска локализованных строк и т.д.
+</summary>
+</member>
+<member name="P:TelegramBotService.My.Resources.Resources.ResourceManager">
+<summary>
+  Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
+</summary>
+</member>
+<member name="P:TelegramBotService.My.Resources.Resources.Culture">
+<summary>
+  Перезаписывает свойство CurrentUICulture текущего потока для всех
+  обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
+</summary>
+</member>
+<member name="M:TelegramBotService.CallbacksHandlers.ShowMainMenu(System.String,Telegram.Bot.Args.CallbackQueryEventArgs,System.String[],System.String[])">
+ <summary>
+ Показывает главное меню после выбора языка
+ </summary>
+ <param name="MainTitle">Заголовок меню</param>
+ <param name="e">Аргументы событий на действия пользователя</param>
+ <param name="MenuTitles">Массив с заголовками кнопок</param>
+</member>
+<member name="M:TelegramBotService.CallbacksHandlers.CallInfo(Telegram.Bot.Args.CallbackQueryEventArgs)">
+ <summary>
+ Коллбэк на действие "Информация к сведению"
+ </summary>
+ <param name="e"></param>
+</member>
+<member name="M:TelegramBotService.CallbacksHandlers.CallPlans(Telegram.Bot.Args.CallbackQueryEventArgs)">
+ <summary>
+ Коллбэк на действие "Тарифы"
+ </summary>
+ <param name="e"></param>
+</member>
+<member name="M:TelegramBotService.CallbacksHandlers.ElectroPlans(Telegram.Bot.Args.CallbackQueryEventArgs)">
+ <summary>
+ Коллбэк на действие "Тарифы по электрической энергии"
+ </summary>
+ <param name="e"></param>
+</member>
+<member name="M:TelegramBotService.CallbacksHandlers.ElectroPlansEntity(Telegram.Bot.Args.CallbackQueryEventArgs)">
+ <summary>
+ Коллбэк на действие "Тарифы по электроэнергии для юредических лиц"
+ </summary>
+ <param name="e"></param>
+</member>
+<member name="M:TelegramBotService.CallbacksHandlers.ElectroPlansIndividual(Telegram.Bot.Args.CallbackQueryEventArgs)">
+ <summary>
+ Коллбэк на действие "Тарифы по электроэнергии для физических лиц"
+ </summary>
+ <param name="e"></param>
+</member>
+<member name="M:TelegramBotService.CallbacksHandlers.ThermalPlans(Telegram.Bot.Args.CallbackQueryEventArgs)">
+ <summary>
+ Коллбэк на действие "Тарифы по теплоэнергии"
+ </summary>
+ <param name="e"></param>
+</member>
+<member name="M:TelegramBotService.CallbacksHandlers.ThermalPlansIndividual(Telegram.Bot.Args.CallbackQueryEventArgs)">
+ <summary>
+ Коллбэк на действие "Тарифы по теплоэнергии для Потребителей"
+ </summary>
+ <param name="e"></param>
+</member>
+<member name="M:TelegramBotService.CallbacksHandlers.ThermalPlansEntity(Telegram.Bot.Args.CallbackQueryEventArgs)">
+ <summary>
+ Коллбэк на действие "Тарифы по теплоэнергии для Юридических лиц"
+ </summary>
+ <param name="e"></param>
+</member>
+<member name="M:TelegramBotService.CallbacksHandlers.CallFeedBack(Telegram.Bot.Args.CallbackQueryEventArgs)">
+ <summary>
+ Коллбэк на действие "Оставить обращение"
+ </summary>
+ <param name="e"></param>
+</member>
+<member name="M:TelegramBotService.CallbacksHandlers.CallPay(Telegram.Bot.Args.CallbackQueryEventArgs)">
+ <summary>
+ Коллбэк по кнопке "Оплатить"
+ </summary>
+ <param name="e"></param>
+</member>
+<member name="M:TelegramBotService.CallbacksHandlers.KassaPay(Telegram.Bot.Args.CallbackQueryEventArgs)">
+ <summary>
+ Коллбэк по кнопке "Оплатить в кассах ТОО"
+ </summary>
+ <param name="e"></param>
+</member>
+<member name="M:TelegramBotService.CallbacksHandlers.OnlinePay(Telegram.Bot.Args.CallbackQueryEventArgs)">
+ <summary>
+ Колбэкк по кнопке "Оплатить Онлайн"
+ </summary>
+ <param name="e"></param>
+</member>
+<member name="M:TelegramBotService.CallbacksHandlers.CallTestimony(Telegram.Bot.Args.CallbackQueryEventArgs)">
+ <summary>
+ Коллбэк на действие "Передать показания"
+ </summary>
+ <param name="e"></param>
+</member>
+<member name="M:TelegramBotService.CallbacksHandlers.ElectroReading(Telegram.Bot.Args.CallbackQueryEventArgs)">
+ <summary>
+ Коллбэк на действие "Передать показания по электроэнергии"
+ </summary>
+ <param name="e"></param>
+</member>
+<member name="M:TelegramBotService.CallbacksHandlers.GVSReading(Telegram.Bot.Args.CallbackQueryEventArgs)">
+ <summary>
+ Коллбэк на действие "Передать показания по ГВС"
+ </summary>
+ <param name="e"></param>
+</member>
+<member name="M:TelegramBotService.CallbacksHandlers.CallDebt(Telegram.Bot.Args.CallbackQueryEventArgs)">
+ <summary>
+ Коллбэк на действие "Проверить задолженность"
+ </summary>
+ <param name="e"></param>
+</member>
+<member name="M:TelegramBotService.CallbacksHandlers.RenderButtonsInColumn(System.Int32,System.String,System.String[],System.String[])">
+ <summary>
+ Кнопки меню в одну колонку
+ </summary>
+ <param name="e"></param>
+ <param name="title"></param>
+ <param name="menu"></param>
+ <param name="actions"></param>
+</member>
+<member name="M:TelegramBotService.FromWebService.GetConsumer(System.String)">
+ <summary>
+ Возвращает список строк с данными счетов пользователя
+ </summary>
+ <param name="id">Номер лицевого счета</param>
+ <returns></returns>
+</member>
+<member name="M:TelegramBotService.FromWebService.CutName(System.String)">
+ <summary>
+ Скрывает часть ФИО
+ </summary>
+ <param name="name"></param>
+ <returns></returns>
+</member>
+<member name="M:TelegramBotService.MyTelegramBot.InitBot(System.Int32)">
+ <summary>
+ Инициализация Бота, меню выбора языков
+ </summary>
+ <param name="FromId"></param>
+</member>
+<member name="M:TelegramBotService.MyTelegramBot.BotOnCallbackQueryRecevied(System.Object,Telegram.Bot.Args.CallbackQueryEventArgs)">
+ <summary>
+ Обработка callback'ов в ответ на действия пользователся
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:TelegramBotService.MyTelegramBot.BotOnMessageRecived(System.Object,Telegram.Bot.Args.MessageEventArgs)">
+ <summary>
+ Событие когда бот получает сообщение от пользователя
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:TelegramBotService.MyTelegramBot.GetEmojiFlag(System.String)">
+ <summary>
+ Кодирует символы флагов емоджи
+ </summary>
+ <param name="lang">строка идентификатора языка</param>
+ <returns></returns>
+</member>
+<member name="T:TelegramBotService.WebService.Service">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.#ctor">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.FillXmlCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.GetIDEmeterNPCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.GetIDPeriodCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.GetCurrentPeriodCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.GetIDObjectNPCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.GetDateTimeCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.ControlerSKCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.StatmentsDllZoneCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.StatmentsDllCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.GetIDEmeterNPbyObjCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.idTmeterCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.GetDateTimeGVSCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.Rpt_PrintCardConsumer_JurCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.ObjectEECompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.ObjectTECompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.AccountCardCGPCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.AccountCardERCCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.AccountCardERC_RaionFizCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.SchetKvitCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.SchetKvitByTempRecordCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.SchetKvitByTempRecord_RaionFizCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.Rpt_PrintCardConsumerInvoice_JurCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.UserCardCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.CabinetLogStatmetsCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.bank_accountCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.bank_account_typeCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.Print_ERCVedomostCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.GetPeopleCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.GetPlateCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.GetOldPeopleCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.GetClassCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.GetTariffCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.GetTariffZoneCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.ERC_SelectCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.ERC_InsertCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.GetInfoViewCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.GetInfoViewGVSCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.GetInfoViewJurCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.FindEmetersJurCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.FindObjectsCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.FindConsumerCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.ShowEECompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.ShowTECompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.FindObjectsEECompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.FindObjectsEPoweringCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.DeclaredConsumptionCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.AmountWithoutPUCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.GetInfoTableJurCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.YakimovCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.GetTempRecordCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.GetPeriodListCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.SaveActualWMCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.SaveActualCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.tmeters_jurCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.tmeter_datesCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.InfoTmeterAscuteCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.ReportTmeterAscuteCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.GetPeriodList_CardAbonentCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.OnOffCabinetCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.GetPeriodListERCCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.GetIDAccountingCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.GetBeginDayPeriodCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.GetEndDayPeriodCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.GetAddressObjectsERCCompleted">
+<remarks/>
+</member>
+<member name="E:TelegramBotService.WebService.Service.GetInfoContractsERCCompleted">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.FillXml(System.String,System.String,System.String,System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.FillXmlAsync(System.String,System.String,System.String,System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.FillXmlAsync(System.String,System.String,System.String,System.Int32,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetIDEmeterNP(System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetIDEmeterNPAsync(System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetIDEmeterNPAsync(System.Int32,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetIDPeriod(System.DateTime,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetIDPeriodAsync(System.DateTime,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetIDPeriodAsync(System.DateTime,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetCurrentPeriod">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetCurrentPeriodAsync">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetCurrentPeriodAsync(System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetIDObjectNP(System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetIDObjectNPAsync(System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetIDObjectNPAsync(System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetDateTime(System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetDateTimeAsync(System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetDateTimeAsync(System.Int32,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.ControlerSK(System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.ControlerSKAsync(System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.ControlerSKAsync(System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.StatmentsDllZone(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.StatmentsDllZoneAsync(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.StatmentsDllZoneAsync(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.StatmentsDll(System.Int32,System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.StatmentsDllAsync(System.Int32,System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.StatmentsDllAsync(System.Int32,System.Int32,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetIDEmeterNPbyObj(System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetIDEmeterNPbyObjAsync(System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetIDEmeterNPbyObjAsync(System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.idTmeter(System.String)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.idTmeterAsync(System.String)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.idTmeterAsync(System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetDateTimeGVS(System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetDateTimeGVSAsync(System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetDateTimeGVSAsync(System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.Rpt_PrintCardConsumer_Jur(System.String,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.Rpt_PrintCardConsumer_JurAsync(System.String,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.Rpt_PrintCardConsumer_JurAsync(System.String,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.ObjectEE(System.String,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.ObjectEEAsync(System.String,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.ObjectEEAsync(System.String,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.ObjectTE(System.String,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.ObjectTEAsync(System.String,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.ObjectTEAsync(System.String,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.AccountCardCGP(System.String,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.Double)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.AccountCardCGPAsync(System.String,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.Double)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.AccountCardCGPAsync(System.String,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.Double,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.AccountCardERC(System.String,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.Double)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.AccountCardERCAsync(System.String,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.Double)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.AccountCardERCAsync(System.String,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.Double,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.AccountCardERC_RaionFiz(System.String,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.Double,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.AccountCardERC_RaionFizAsync(System.String,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.Double,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.AccountCardERC_RaionFizAsync(System.String,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.Double,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.SchetKvit(System.Int32,System.Int32,System.String,System.Boolean,System.Int32,System.String,System.String,System.Int32,System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.SchetKvitAsync(System.Int32,System.Int32,System.String,System.Boolean,System.Int32,System.String,System.String,System.Int32,System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.SchetKvitAsync(System.Int32,System.Int32,System.String,System.Boolean,System.Int32,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.SchetKvitByTempRecord(System.Int32,System.Int32,System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.SchetKvitByTempRecordAsync(System.Int32,System.Int32,System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.SchetKvitByTempRecordAsync(System.Int32,System.Int32,System.String,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.SchetKvitByTempRecord_RaionFiz(System.Int32,System.Int32,System.String,System.String,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.SchetKvitByTempRecord_RaionFizAsync(System.Int32,System.Int32,System.String,System.String,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.SchetKvitByTempRecord_RaionFizAsync(System.Int32,System.Int32,System.String,System.String,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.Rpt_PrintCardConsumerInvoice_Jur(System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Int32,System.Boolean)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.Rpt_PrintCardConsumerInvoice_JurAsync(System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Int32,System.Boolean)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.Rpt_PrintCardConsumerInvoice_JurAsync(System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Int32,System.Boolean,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.UserCard(System.String)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.UserCardAsync(System.String)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.UserCardAsync(System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.CabinetLogStatmets(System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.CabinetLogStatmetsAsync(System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.CabinetLogStatmetsAsync(System.String,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.bank_account(System.String,System.String,System.String,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.bank_accountAsync(System.String,System.String,System.String,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.bank_accountAsync(System.String,System.String,System.String,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.bank_account_type(System.String,System.String,System.String,System.String,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.bank_account_typeAsync(System.String,System.String,System.String,System.String,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.bank_account_typeAsync(System.String,System.String,System.String,System.String,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.Print_ERCVedomost(System.String,System.String,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.Print_ERCVedomostAsync(System.String,System.String,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.Print_ERCVedomostAsync(System.String,System.String,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetPeople(System.Int32,System.String)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetPeopleAsync(System.Int32,System.String)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetPeopleAsync(System.Int32,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetPlate(System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetPlateAsync(System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetPlateAsync(System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetOldPeople(System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetOldPeopleAsync(System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetOldPeopleAsync(System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetClass(System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetClassAsync(System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetClassAsync(System.Int32,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetTariff(System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetTariffAsync(System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetTariffAsync(System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetTariffZone">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetTariffZoneAsync">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetTariffZoneAsync(System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.ERC_Select(System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.ERC_SelectAsync(System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.ERC_SelectAsync(System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.ERC_Insert(System.Int32,System.Int32,System.Int32,System.Int32,System.DateTime,System.Int32,System.Int32,System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.ERC_InsertAsync(System.Int32,System.Int32,System.Int32,System.Int32,System.DateTime,System.Int32,System.Int32,System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.ERC_InsertAsync(System.Int32,System.Int32,System.Int32,System.Int32,System.DateTime,System.Int32,System.Int32,System.Int32,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetInfoView(System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetInfoViewAsync(System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetInfoViewAsync(System.Int32,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetInfoViewGVS(System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetInfoViewGVSAsync(System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetInfoViewGVSAsync(System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetInfoViewJur(System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetInfoViewJurAsync(System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetInfoViewJurAsync(System.Int32,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.FindEmetersJur(System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.FindEmetersJurAsync(System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.FindEmetersJurAsync(System.Int32,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.FindObjects(System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.FindObjectsAsync(System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.FindObjectsAsync(System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.FindConsumer(System.String,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.FindConsumerAsync(System.String,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.FindConsumerAsync(System.String,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.ShowEE(System.String,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.ShowEEAsync(System.String,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.ShowEEAsync(System.String,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.ShowTE(System.String)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.ShowTEAsync(System.String)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.ShowTEAsync(System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.FindObjectsEE(System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.FindObjectsEEAsync(System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.FindObjectsEEAsync(System.Int32,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.FindObjectsEPowering(System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.FindObjectsEPoweringAsync(System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.FindObjectsEPoweringAsync(System.Int32,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.DeclaredConsumption(System.Int32,System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.DeclaredConsumptionAsync(System.Int32,System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.DeclaredConsumptionAsync(System.Int32,System.Int32,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.AmountWithoutPU(System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.AmountWithoutPUAsync(System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.AmountWithoutPUAsync(System.Int32,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetInfoTableJur(System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetInfoTableJurAsync(System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetInfoTableJurAsync(System.Int32,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.Yakimov(System.String)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.YakimovAsync(System.String)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.YakimovAsync(System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetTempRecord(System.String,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetTempRecordAsync(System.String,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetTempRecordAsync(System.String,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetPeriodList(System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetPeriodListAsync(System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetPeriodListAsync(System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.SaveActualWM(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.SaveActualWMAsync(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.SaveActualWMAsync(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.SaveActual(System.Int32,System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.SaveActualAsync(System.Int32,System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.SaveActualAsync(System.Int32,System.Int32,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.tmeters_jur(System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.tmeters_jurAsync(System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.tmeters_jurAsync(System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.tmeter_dates(System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.tmeter_datesAsync(System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.tmeter_datesAsync(System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.InfoTmeterAscute(System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.InfoTmeterAscuteAsync(System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.InfoTmeterAscuteAsync(System.Int32,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.ReportTmeterAscute(System.String,System.DateTime,System.DateTime)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.ReportTmeterAscuteAsync(System.String,System.DateTime,System.DateTime)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.ReportTmeterAscuteAsync(System.String,System.DateTime,System.DateTime,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetPeriodList_CardAbonent(System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetPeriodList_CardAbonentAsync(System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetPeriodList_CardAbonentAsync(System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.OnOffCabinet(System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.OnOffCabinetAsync(System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.OnOffCabinetAsync(System.Int32,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetPeriodListERC">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetPeriodListERCAsync">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetPeriodListERCAsync(System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetIDAccounting(System.String)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetIDAccountingAsync(System.String)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetIDAccountingAsync(System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetBeginDayPeriod(System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetBeginDayPeriodAsync(System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetBeginDayPeriodAsync(System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetEndDayPeriod(System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetEndDayPeriodAsync(System.Int32)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetEndDayPeriodAsync(System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetAddressObjectsERC(System.String)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetAddressObjectsERCAsync(System.String)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetAddressObjectsERCAsync(System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetInfoContractsERC(System.String)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetInfoContractsERCAsync(System.String)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.GetInfoContractsERCAsync(System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:TelegramBotService.WebService.Service.CancelAsync(System.Object)">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.FillXmlCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.FillXmlCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.FillXmlCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetIDEmeterNPCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetIDEmeterNPCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.GetIDEmeterNPCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetIDPeriodCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetIDPeriodCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.GetIDPeriodCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetCurrentPeriodCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetCurrentPeriodCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.GetCurrentPeriodCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetIDObjectNPCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetIDObjectNPCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.GetIDObjectNPCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetDateTimeCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetDateTimeCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.GetDateTimeCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.ControlerSKCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.ControlerSKCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.ControlerSKCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.StatmentsDllZoneCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.StatmentsDllZoneCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.StatmentsDllZoneCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.StatmentsDllCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.StatmentsDllCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.StatmentsDllCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetIDEmeterNPbyObjCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetIDEmeterNPbyObjCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.GetIDEmeterNPbyObjCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.idTmeterCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.idTmeterCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.idTmeterCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetDateTimeGVSCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetDateTimeGVSCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.GetDateTimeGVSCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.Rpt_PrintCardConsumer_JurCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.Rpt_PrintCardConsumer_JurCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.Rpt_PrintCardConsumer_JurCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.ObjectEECompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.ObjectEECompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.ObjectEECompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.ObjectTECompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.ObjectTECompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.ObjectTECompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.AccountCardCGPCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.AccountCardCGPCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.AccountCardCGPCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.AccountCardERCCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.AccountCardERCCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.AccountCardERCCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.AccountCardERC_RaionFizCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.AccountCardERC_RaionFizCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.AccountCardERC_RaionFizCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.SchetKvitCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.SchetKvitCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.SchetKvitCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.SchetKvitByTempRecordCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.SchetKvitByTempRecordCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.SchetKvitByTempRecordCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.SchetKvitByTempRecord_RaionFizCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.SchetKvitByTempRecord_RaionFizCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.SchetKvitByTempRecord_RaionFizCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.Rpt_PrintCardConsumerInvoice_JurCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.Rpt_PrintCardConsumerInvoice_JurCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.Rpt_PrintCardConsumerInvoice_JurCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.UserCardCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.UserCardCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.UserCardCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.CabinetLogStatmetsCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.CabinetLogStatmetsCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.CabinetLogStatmetsCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.bank_accountCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.bank_accountCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.bank_accountCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.bank_account_typeCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.bank_account_typeCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.bank_account_typeCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.Print_ERCVedomostCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.Print_ERCVedomostCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.Print_ERCVedomostCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetPeopleCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetPeopleCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.GetPeopleCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetPlateCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetPlateCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.GetPlateCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetOldPeopleCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetOldPeopleCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.GetOldPeopleCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetClassCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetClassCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.GetClassCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetTariffCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetTariffCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.GetTariffCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetTariffZoneCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetTariffZoneCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.GetTariffZoneCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.ERC_SelectCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.ERC_SelectCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.ERC_SelectCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.ERC_InsertCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.ERC_InsertCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.ERC_InsertCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetInfoViewCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetInfoViewCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.GetInfoViewCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetInfoViewGVSCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetInfoViewGVSCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.GetInfoViewGVSCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetInfoViewJurCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetInfoViewJurCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.GetInfoViewJurCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.FindEmetersJurCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.FindEmetersJurCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.FindEmetersJurCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.FindObjectsCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.FindObjectsCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.FindObjectsCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.FindConsumerCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.FindConsumerCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.FindConsumerCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.ShowEECompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.ShowEECompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.ShowEECompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.ShowTECompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.ShowTECompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.ShowTECompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.FindObjectsEECompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.FindObjectsEECompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.FindObjectsEECompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.FindObjectsEPoweringCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.FindObjectsEPoweringCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.FindObjectsEPoweringCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.DeclaredConsumptionCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.DeclaredConsumptionCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.DeclaredConsumptionCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.AmountWithoutPUCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.AmountWithoutPUCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.AmountWithoutPUCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetInfoTableJurCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetInfoTableJurCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.GetInfoTableJurCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.YakimovCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.YakimovCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.YakimovCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetTempRecordCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetTempRecordCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.GetTempRecordCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetPeriodListCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetPeriodListCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.GetPeriodListCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.SaveActualWMCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.SaveActualWMCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.SaveActualWMCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.SaveActualCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.SaveActualCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.SaveActualCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.tmeters_jurCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.tmeters_jurCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.tmeters_jurCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.tmeter_datesCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.tmeter_datesCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.tmeter_datesCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.InfoTmeterAscuteCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.InfoTmeterAscuteCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.InfoTmeterAscuteCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.ReportTmeterAscuteCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.ReportTmeterAscuteCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.ReportTmeterAscuteCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetPeriodList_CardAbonentCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetPeriodList_CardAbonentCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.GetPeriodList_CardAbonentCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.OnOffCabinetCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.OnOffCabinetCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.OnOffCabinetCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetPeriodListERCCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetPeriodListERCCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.GetPeriodListERCCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetIDAccountingCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetIDAccountingCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.GetIDAccountingCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetBeginDayPeriodCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetBeginDayPeriodCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.GetBeginDayPeriodCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetEndDayPeriodCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetEndDayPeriodCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.GetEndDayPeriodCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetAddressObjectsERCCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetAddressObjectsERCCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.GetAddressObjectsERCCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetInfoContractsERCCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TelegramBotService.WebService.GetInfoContractsERCCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TelegramBotService.WebService.GetInfoContractsERCCompletedEventArgs.Result">
+<remarks/>
+</member>
+</members>
+</doc>
